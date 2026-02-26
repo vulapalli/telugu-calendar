@@ -4,6 +4,19 @@ import math
 from datetime import datetime
 import pytz
 import base64
+# --- PROFESSIONAL UI OVERRIDE ---
+st.set_page_config(page_title="Telugu Panchangam", page_icon="🕉️", layout="wide")
+
+hide_ui_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    /* This removes the padding at the top for a cleaner look */
+    .block-container {padding-top: 2rem;}
+    </style>
+"""
+st.markdown(hide_ui_style, unsafe_allow_html=True)
 
 # --- 1. ENGINE (No changes here, kept for NameError safety) ---
 def format_lang(pair, mode):
